@@ -1,0 +1,20 @@
+# Build and Release Folders
+bin/
+bin-debug/
+bin-release/
+
+# Other files and folders
+.settings/
+.actionScriptProperties
+.flexLibProperties
+.fxpProperties
+.project
+org.eclipse.core.resources.prefs
+.flexProperties
+.metadata
+.DS_Store
+releases
+build.properties
+out
+.idea
+*.iml
