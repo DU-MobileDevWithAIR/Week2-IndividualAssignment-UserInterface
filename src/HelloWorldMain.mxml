@@ -2,5 +2,9 @@
 <!--
   Created by jun on 9/14/14.
 -->
-<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    firstView="edu.du.mobile.view.RegisterView"
+    title="Hello World!">
+
 </s:ViewNavigatorApplication>
