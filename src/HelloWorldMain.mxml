@@ -4,7 +4,11 @@
 -->
 <s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark"
-    firstView="edu.du.mobile.view.RegisterView"
+    firstView="edu.du.mobile.view.TemporaryView"
     title="Hello World!">
+
+    <s:navigationContent>
+        <s:Button label="Home" click="navigator.popToFirstView()"/>
+    </s:navigationContent>
 
 </s:ViewNavigatorApplication>
