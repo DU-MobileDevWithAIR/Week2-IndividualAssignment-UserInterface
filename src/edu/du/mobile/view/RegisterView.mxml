@@ -3,8 +3,43 @@
   Created by jun on 9/14/14.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
+        xmlns:s="library://ns.adobe.com/flex/spark">
 
-    <!-- TODO: Create the Register View UI -->
+    <s:Scroller width="100%" height="100%">
+    <s:VGroup paddingLeft="50">
+        <s:Label text="Register" paddingTop="10" fontWeight="bold" fontSize="42" textAlign="center" width="400"></s:Label>
 
+        <s:Label text="Username *" paddingTop="10"></s:Label>
+        <s:TextInput id="username" prompt="please choose a username" width="400"/>
+
+        <s:Label text="Email *" paddingTop="10"></s:Label>
+        <s:TextInput id="email" prompt="please enter your email" width="400"/>
+
+        <s:Label text="Password *" paddingTop="10"></s:Label>
+        <s:TextInput id="password" prompt="please choose a password" width="400"/>
+
+        <s:Label text="Confirm Password *" paddingTop="10"></s:Label>
+        <s:TextInput id="password_confirm" prompt="please confirm your password" width="400"/>
+
+
+        <s:Label text="Gender" paddingTop="10" paddingBottom="20"></s:Label>
+        <s:HGroup>
+            <s:RadioButton groupName="gender"
+                           id="male"
+                           label="Male"
+                           width="150"/>
+            <s:RadioButton groupName="gender"
+                           id="female"
+                           label="Female"
+                           width="150"/>
+        </s:HGroup>
+        <s:VGroup paddingTop="10" paddingBottom="20">
+            <s:CheckBox label="Agree to terms *"/>
+        </s:VGroup>
+        <!-- TODO: center the button //-->
+       <s:Button id="register_button" label="Register"/>
+
+
+    </s:VGroup>
+</s:Scroller>
 </s:View>
