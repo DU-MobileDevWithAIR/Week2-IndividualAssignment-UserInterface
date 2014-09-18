@@ -3,8 +3,58 @@
   Created by jun on 9/14/14.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    title="Register">
+
+    <fx:Style>
+        .registerTitle{
+            fontSize: 35;
+            horizontalCenter: 0;
+            top: 60;
+        }
+
+        .inputTitleText {
+            horizontalCenter: 0;
+        }
+
+        .regInput {
+            horizontalCenter: 0;
+        }
+
+
+
+
+    </fx:Style>
 
     <!-- TODO: Create the Register View UI -->
+
+    <s:Label styleName="registerTitle" text="Register"/>
+
+    <s:VGroup gap="30" top="125" >
+
+    <s:SkinnableContainer horizontalCenter="0">
+      <s:Label  width="80%" styleName="inputTitleText" text="Username*"/>
+      <s:TextInput width="80%" top="35" styleName="regInput" enabled="true" text="please choose a username"/>
+    </s:SkinnableContainer>
+
+    <s:SkinnableContainer horizontalCenter="0">
+        <s:Label  width="80%" styleName="inputTitleText" text="Username*"/>
+        <s:TextInput width="80%" top="35" styleName="regInput" enabled="true" text="please choose a username"/>
+    </s:SkinnableContainer>
+
+    </s:VGroup>
+
+                  <!--<s:Label styleName="inputTitleText" text="Username*" textAlign="left" top="60"/>-->
+                  <!--<s:TextInput width="75%" styleName="regInput" enabled="true" text="please choose a username"/>-->
+
+                  <!--<s:Label styleName="inputTitleText" text="Email*" width="75%" y="70"/>-->
+                  <!--<s:TextInput styleName="regInput" enabled="true" text="please enter your email"/>-->
+
+                  <!--<s:Label styleName="inputTitleText" text="Password*" width="75%" y="70"/>-->
+                  <!--<s:TextInput styleName="regInput" enabled="true" text="please choose a password"/>-->
+
+                  <!--<s:Label styleName="inputTitleText" text="Confirm Password*" width="75%" y="70"/>-->
+                  <!--<s:TextInput styleName="regInput" enabled="true" text="please confirm your password"/>-->
+
 
 </s:View>
