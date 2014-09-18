@@ -2,9 +2,34 @@
 <!--
   Created by jun on 9/14/14.
 -->
+
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark">
+    <s:Scroller width="100%" height="100%">
+        <s:VGroup width="100%" height="100%" horizontalAlign="center">
+            <s:Label fontSize="35" paddingTop="10" paddingBottom="20">Register</s:Label>
 
-    <!-- TODO: Create the Register View UI -->
+            <s:Label textAlign="left" width="300" fontSize="18">Username *</s:Label>
+            <s:TextInput width="300" textAlign="center" fontSize="18" prompt="please choose a username" ></s:TextInput>
 
+            <s:Label textAlign="left" width="300" fontSize="18" paddingTop="10">Email *</s:Label>
+            <s:TextInput width="300" textAlign="center" fontSize="18"  prompt="please enter your email"></s:TextInput>
+
+            <s:Label textAlign="left" width="300" fontSize="18" paddingTop="10">Password *</s:Label>
+            <s:TextInput width="300" textAlign="center" fontSize="18" prompt="please choose a password"></s:TextInput>
+
+            <s:Label textAlign="left" width="300" fontSize="18" paddingTop="10">Confirm Password *</s:Label>
+                <s:TextInput width="300" textAlign="center" fontSize="18" prompt="please confirm your password" ></s:TextInput>
+
+            <s:Label textAlign="left" width="300" fontSize="18" paddingTop="10" paddingBottom="10">Gender</s:Label>
+            <s:HGroup fontSize="10" paddingBottom="15">
+                <s:RadioButton groupName="gender" label="Male" fontSize="18" selected="true"/>
+                <s:RadioButton groupName="gender" label="Female" fontSize="18"/>
+            </s:HGroup>
+
+            <s:CheckBox textAlignLast="left" label="Agree to Terms*" selected="false" fontSize="18"/>
+
+            <s:Button id="submit_register" width="200" label="Register"/>
+        </s:VGroup>
+    </s:Scroller>
 </s:View>
