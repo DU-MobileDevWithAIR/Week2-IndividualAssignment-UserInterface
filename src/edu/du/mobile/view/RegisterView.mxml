@@ -7,43 +7,40 @@
 
     <s:Scroller width="100%" height="100%">
         <s:VGroup paddingLeft="50" width="100%">
-
-            <s:HGroup horizontalAlign="center" width="100%" paddingTop="10">
-                <s:Label text="Register" fontWeight="bold" fontSize="42"></s:Label>
-            </s:HGroup>
-
-            <s:Label text="Username *" paddingTop="10"></s:Label>
-            <s:TextInput id="username" prompt="please choose a username" width="400"/>
-
-            <s:Label text="Email *" paddingTop="10"></s:Label>
-            <s:TextInput id="email" prompt="please enter your email" width="400"/>
-
-            <s:Label text="Password *" paddingTop="10"></s:Label>
-            <s:TextInput id="password" prompt="please choose a password" width="400"/>
-
-            <s:Label text="Confirm Password *" paddingTop="10"></s:Label>
-            <s:TextInput id="password_confirm" prompt="please confirm your password" width="400"/>
-
-            <s:Label text="Gender" paddingTop="20" paddingBottom="10"></s:Label>
-
-            <s:HGroup>
-                <s:RadioButton groupName="gender"
-                               id="male"
-                               label="Male"
-                               width="150"/>
-                <s:RadioButton groupName="gender"
-                               id="female"
-                               label="Female"
-                               width="150"/>
-            </s:HGroup>
-
-            <s:VGroup paddingTop="20" paddingBottom="10">
-                <s:CheckBox label="Agree to terms *"/>
-            </s:VGroup>
-
-            <s:HGroup horizontalAlign="center" width="100%">
-                <s:Button id="register_button" label="Register"/>
-            </s:HGroup>
+            <s:Form skinClass="spark.skins.spark.StackedFormSkin" fontSize="20" >
+                <s:layout>
+                    <s:FormLayout gap="0"/>
+                </s:layout>
+                <s:HGroup horizontalAlign="center" width="100%" paddingTop="10">
+                    <s:FormHeading label="Register" skinClass="spark.skins.spark.StackedFormHeadingSkin" fontSize="32"/>
+                </s:HGroup>
+                <s:FormItem label="Username" skinClass="spark.skins.spark.StackedFormItemSkin" required="true">
+                    <s:TextInput width="350" prompt="please choose a password"/>
+                </s:FormItem>
+                <s:FormItem label="Email" skinClass="spark.skins.spark.StackedFormItemSkin" required="true">
+                    <s:TextInput width="350" prompt="please enter your email"/>
+                </s:FormItem>
+                <s:FormItem label="Password" skinClass="spark.skins.spark.StackedFormItemSkin" required="true">
+                    <s:TextInput width="350" prompt="please choose a password"/>
+                </s:FormItem>
+                <s:FormItem label="Confirm Password" skinClass="spark.skins.spark.StackedFormItemSkin" required="true">
+                    <s:TextInput width="350" prompt="please confirm your password"/>
+                </s:FormItem>
+                <s:FormItem label="Gender" skinClass="spark.skins.spark.StackedFormItemSkin">
+                    <s:HGroup>
+                        <s:RadioButton label="Male"/>
+                        <s:RadioButton label="Female"/>
+                    </s:HGroup>
+                </s:FormItem>
+                <s:FormItem skinClass="spark.skins.spark.StackedFormItemSkin" required="true">
+                        <s:CheckBox label="Agree to terms"/>
+                </s:FormItem>
+                <s:FormItem skinClass="spark.skins.spark.StackedFormItemSkin">
+                    <s:HGroup horizontalAlign="center" width="100%">
+                        <s:Button label="Register"/>
+                    </s:HGroup>
+                </s:FormItem>
+            </s:Form>
         </s:VGroup>
     </s:Scroller>
 </s:View>

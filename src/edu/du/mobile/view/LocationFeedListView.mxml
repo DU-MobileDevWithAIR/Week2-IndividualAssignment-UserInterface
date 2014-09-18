@@ -10,18 +10,13 @@
             <s:HGroup paddingTop="20" paddingBottom="20">
                 <s:Label text="Nearby Locations" fontWeight="bold" fontSize="20" textAlign="center"
                          width="400"></s:Label>
-
                 <s:RichEditableText id="richTxt"
                                     editable="false"
                                     focusEnabled="false" fontSize="20">
                     <s:a href="#">Done</s:a>
                 </s:RichEditableText>
             </s:HGroup>
-            <!-- TODO: full length items //-->
             <s:List width="100%" id="myList" borderVisible="true">
-                <s:layout>
-                    <s:VerticalLayout/>
-                </s:layout>
                 <s:dataProvider>
                     <s:ArrayCollection>
                         <fx:String>Item 1</fx:String>
