@@ -6,8 +6,8 @@
         xmlns:s="library://ns.adobe.com/flex/spark">
 
     <s:Scroller width="100%" height="100%">
-        <s:VGroup paddingTop="10" paddingLeft="10">
-            <s:HGroup>
+        <s:VGroup paddingTop="10" paddingLeft="10" paddingRight="10">
+            <s:HGroup paddingTop="20" paddingBottom="20">
                 <s:Label text="Nearby Locations" fontWeight="bold" fontSize="20" textAlign="center"
                          width="400"></s:Label>
 
@@ -18,16 +18,17 @@
                 </s:RichEditableText>
             </s:HGroup>
             <!-- TODO: full length items //-->
-            <s:List width="450"
-                    borderVisible="true">
+            <s:List width="100%" id="myList" borderVisible="true">
                 <s:layout>
                     <s:VerticalLayout/>
                 </s:layout>
-                <s:ArrayCollection>
-                    <fx:String>Item 1</fx:String>
-                    <fx:String>Item 2</fx:String>
-                    <fx:String>Item 3</fx:String>
-                </s:ArrayCollection>
+                <s:dataProvider>
+                    <s:ArrayCollection>
+                        <fx:String>Item 1</fx:String>
+                        <fx:String>Item 2</fx:String>
+                        <fx:String>Item 3</fx:String>
+                    </s:ArrayCollection>
+                </s:dataProvider>
             </s:List>
         </s:VGroup>
     </s:Scroller>
