@@ -8,7 +8,9 @@
     title="Hello World!">
 
     <s:navigationContent>
-        <s:Button label="Home" click="navigator.popToFirstView()"/>
+        <s:Button click="navigator.popToFirstView()">
+            <s:label>Home</s:label>
+        </s:Button>
     </s:navigationContent>
 
 </s:ViewNavigatorApplication>
