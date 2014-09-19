@@ -3,8 +3,8 @@
   Created by jun on 9/14/14.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark"
-    title="Register">
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               title="Register">
 
     <fx:Style>
         .registerTitle{
@@ -15,70 +15,74 @@
 
         .inputTitleText {
             horizontalCenter: 0;
+            fontSize: 16;
         }
 
         .regInput {
             horizontalCenter: 0;
-            top: 30;
-
+            top: 20;
+            fontSize: 16;
         }
 
-
-
-
-    </fx:Style>
+     </fx:Style>
 
     <!-- TODO: Create the Register View UI -->
 
-    <s:Label
-            styleName="registerTitle"
-            text="Register"/>
+    <s:Scroller width="100%" height="100%">
+        <s:Group>
+            <s:Label
+                    styleName="registerTitle"
+                    text="Register"/>
 
-    <s:VGroup gap="30" top="125" horizontalCenter="0">
+            <s:VGroup  gap="20" top="125" horizontalCenter="0">
 
-        <s:SkinnableContainer horizontalCenter="0">
-          <s:Label  width="80%" styleName="inputTitleText" text="Username*"/>
-          <s:TextInput width="80%" styleName="regInput" enabled="true" text="please choose a username"/>
-        </s:SkinnableContainer>
+                <s:SkinnableContainer horizontalCenter="0">
+                  <s:Label  width="80%" styleName="inputTitleText" text="Username*"/>
+                  <s:TextInput height="40" width="80%" styleName="regInput" enabled="true" text="please choose a username"/>
+                </s:SkinnableContainer>
 
-        <s:SkinnableContainer horizontalCenter="0">
-            <s:Label  width="80%" styleName="inputTitleText" text="Email*"/>
-            <s:TextInput width="80%" styleName="regInput" enabled="true" text="please enter your email"/>
-        </s:SkinnableContainer>
+                <s:SkinnableContainer horizontalCenter="0">
+                    <s:Label  width="80%" styleName="inputTitleText" text="Email*"/>
+                    <s:TextInput height="40" width="80%" styleName="regInput" enabled="true" text="please enter your email"/>
+                </s:SkinnableContainer>
 
-        <s:SkinnableContainer horizontalCenter="0">
-            <s:Label  width="80%" styleName="inputTitleText" text="Password*"/>
-            <s:TextInput width="80%" styleName="regInput" enabled="true" text="please choose a password"/>
-        </s:SkinnableContainer>
+                <s:SkinnableContainer horizontalCenter="0">
+                    <s:Label  width="80%" styleName="inputTitleText" text="Password*"/>
+                    <s:TextInput height="40" width="80%" styleName="regInput" enabled="true" text="please choose a password"/>
+                </s:SkinnableContainer>
 
-        <s:SkinnableContainer horizontalCenter="0">
-            <s:Label  width="80%" styleName="inputTitleText" text="Confirm Password*"/>
-            <s:TextInput width="80%" styleName="regInput" enabled="true" text="please confirm your password"/>
-        </s:SkinnableContainer>
+                <s:SkinnableContainer horizontalCenter="0">
+                    <s:Label  width="80%" styleName="inputTitleText" text="Confirm Password*"/>
+                    <s:TextInput  height="40" width="80%" styleName="regInput" enabled="true" text="please confirm your password"/>
+                </s:SkinnableContainer>
 
-    </s:VGroup>
+            </s:VGroup>
 
+            <s:VGroup  gap="20" top="450" horizontalCenter="-20">
 
-    <s:SkinnableContainer horizontalCenter="0" top="600">
-        <s:Label  width="80%" styleName="inputTitleText" text="Confirm Password*"/>
-        <s:TextInput width="80%" top="35" styleName="regInput" enabled="true" text="please confirm your password"/>
-    </s:SkinnableContainer>
+                <s:SkinnableContainer>
+                    <s:Label text="Gender*" fontSize="16"/>
+                </s:SkinnableContainer>
 
+                <s:HGroup width="100%">
 
-    <s:HGroup horizontalCenter="0"
-              width="75%"
-              gap="50"
-              top="900"  >
+                    <s:RadioButton groupName="cardtype"
+                                   id="male"
+                                   label="Male"
+                                   width="140"
+                                   fontSize="16"/>
 
-        <s:SkinnableContainer horizontalCenter="0">
-            <s:Label text="Hello"/>
-        </s:SkinnableContainer>
+                    <s:RadioButton groupName="cardtype"
+                                   id="female"
+                                   label="Female"
+                                   width="160"
+                                   fontSize="16"/>
+                </s:HGroup>
+            </s:VGroup>
 
-        <s:SkinnableContainer horizontalCenter="0">
-            <s:Label text="Hello"/>
-        </s:SkinnableContainer>
+            <s:Button label="Register" top="550" horizontalCenter="0" height="40" fontSize="14"/>
 
-    </s:HGroup>
-
+        </s:Group>
+    </s:Scroller>
 
 </s:View>
