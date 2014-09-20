@@ -3,8 +3,42 @@
   Created by jun on 9/14/14.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
-
+        xmlns:s="library://ns.adobe.com/flex/spark">
+        <!--xmlns:mx="library://ns.adobe.com/flex/mx">-->
     <!-- TODO: Create the LocationFeed List View UI -->
-
+<s:Panel title="Nearby Locations"
+         width="75%" height="75%"
+         horizontalCenter="0" verticalCenter="0">
+    <!--<s:Label width="100%"
+             text="Done"/>
+   <mx:LinkButton label="LinkButton control" color="#0000FF" fontweight="bold"
+                   click="Alert.show('LinkButton selected!');"/>-->
+    <s:HGroup>
+        <s:DataGroup id="viewport" left="10" top="10"
+                     clipAndEnableScrolling="true"
+                     itemRenderer="spark.skins.spark.DefaultItemRenderer">
+    <s:layout>
+        <s:VerticalLayout requestedRowCount="4"/>
+    </s:layout>
+            <s:dataProvider>
+                <s:ArrayCollection>
+                    <fx:String>One</fx:String>
+                    <fx:String>Two</fx:String>
+                    <fx:String>Three</fx:String>
+                    <fx:String>Four</fx:String>
+                    <fx:String>Five</fx:String>
+                    <fx:String>Six</fx:String>
+                    <fx:String>Seven</fx:String>
+                    <fx:String>Eight</fx:String>
+                    <fx:String>Nine</fx:String>
+                    <fx:String>Ten</fx:String>
+                </s:ArrayCollection>
+            </s:dataProvider>
+        </s:DataGroup>
+            <s:VScrollBar viewport="{viewport}"
+                          left="{viewport.x + viewport.width + 10}"
+                          top="10"
+                          height="{viewport.height}"/>
+        </s:HGroup>
+    </s:Panel>
 </s:View>

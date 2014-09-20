@@ -14,10 +14,6 @@
         <s:TextInput id="username_ti"
             prompt="enter your username"/>
 
-        <s:Label text="email:"/>
-        <s:TextInput id="email_ti"
-            prompt="enter your email"/>
-
         <s:Label text="password:"/>
         <s:TextInput id="password_ti"
             prompt="enter your password"
