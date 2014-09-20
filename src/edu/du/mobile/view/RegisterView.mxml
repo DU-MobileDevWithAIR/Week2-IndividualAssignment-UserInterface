@@ -1,10 +1,65 @@
 <?xml version="1.0"?>
 <!--
   Created by jun on 9/14/14.
+  Modified by O'Neal, Abi, Week 2.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
-
-    <!-- TODO: Create the Register View UI -->
-
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    title="Register">
+        <s:VGroup width="100%" height="98%" horizontalAlign="center" id="registrationGroup">
+            <s:Form id="registration" percentWidth="70">
+                <!-- percentWidth is used to specify the width in relative terms to the parent -->
+                <s:FormHeading label="Register" fontSize="26" textAlign="center"/>
+                <s:FormItem label="Username" required="true">
+                    <s:TextInput  percentWidth="100" prompt="please choose a username"/>
+                </s:FormItem>
+                <s:FormItem label="Email" required="true">
+                    <s:TextInput percentWidth="100" prompt="please enter your email"/>
+                </s:FormItem>
+                <s:FormItem label="Password" required="true">
+                    <s:TextInput percentWidth="100" prompt="please choose a password" displayAsPassword="true"/>
+                </s:FormItem>
+                <s:FormItem label="Confirm Password" required="true">
+                    <s:TextInput percentWidth="100" prompt="please confirm your password" displayAsPassword="true"/>
+                </s:FormItem>
+                <s:FormItem label="Gender">
+                    <s:HGroup>
+                        <s:RadioButton label="Male"/>
+                        <s:RadioButton label="Female"/>
+                    </s:HGroup>
+                </s:FormItem>
+                <s:FormItem required="true">
+                    <s:CheckBox label="Agree to Terms" />
+                    <s:helpContent>
+                        <s:Label text="?" click="termsOfUse.displayPopUp=true" right="40"/>
+                        <!-- If people are going to agree to terms, they ought to have easy access to them.-->
+                        <s:PopUpAnchor id="termsOfUse" popUpPosition="below" width="100%" height="90%">
+                            <!-- BorderContainer to hold popUp contents -->
+                            <s:BorderContainer backgroundColor="0x8b0000" color="white">
+                                <s:layout>
+                                    <s:VerticalLayout paddingTop="5" paddingLeft="5" paddingBottom="5" paddingRight="5"/>
+                                </s:layout>
+                                <s:RichText width="100%" maxWidth="300">
+                                    <s:p>This application is a student project. By using it, you are agreeing:</s:p>
+                                    <s:p>- That you will indemnify and release of all liability the student, professor, and University.</s:p>
+                                    <s:p>- That you know that we are not taking any measures whatsoever to safeguard your privacy.</s:p>
+                                    <s:p>- That there is no warranty of any sort associated with this application.</s:p>
+                                    <s:p>- That you are using this application 100% at your own risk, including any risk to your data or device.</s:p>
+                                </s:RichText>
+                                <s:HGroup>
+                                    <s:Label text="Okay, Got it!" click="termsOfUse.displayPopUp=false" backgroundColor="black" color="white" height="40" width="280" textAlign="center" verticalAlign="middle"/>
+                                </s:HGroup>
+                            </s:BorderContainer>
+                        </s:PopUpAnchor>
+                    </s:helpContent>
+                </s:FormItem>
+                <s:FormItem>
+                    <s:HGroup horizontalAlign="center" percentWidth="100">
+                        <s:Button label="Register"/>
+                    </s:HGroup>
+                </s:FormItem>
+            </s:Form>
+        </s:VGroup>
+        <s:VScrollBar viewport="{registrationGroup}" height="100%"/>
+        <!-- Per Adobe, the VScrollBar method is an acceptable alternative to scroller -->
 </s:View>

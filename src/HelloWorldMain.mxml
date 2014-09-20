@@ -1,14 +1,37 @@
 <?xml version="1.0"?>
 <!--
   Created by jun on 9/14/14.
+  Modified by O'Neal, Abi, Week 2.
+
+  Modifications have been tested in the following emulators:
+  1. Apple iPhone (Both Orientations)
+  2. Apple iPhone Retina (Both Orientations)
+  3. Google Nexus One (Both Orientations)
+  4. Droid (Both Orientations)
 -->
 <s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark"
     firstView="edu.du.mobile.view.TemporaryView"
     title="Hello World!">
-
+    <fx:Style>
+        @namespace s "library://ns.adobe.com/flex/spark";
+        s|Form
+        {
+            skinClass: ClassReference("spark.skins.spark.StackedFormSkin");
+        }
+        s|FormHeading
+        {
+            skinClass: ClassReference("spark.skins.spark.StackedFormHeadingSkin");
+        }
+        s|FormItem
+        {
+            skinClass: ClassReference("spark.skins.spark.StackedFormItemSkin");
+        }
+    </fx:Style>
+    <!-- skinClasses could have been applied inline within each form. In the interest of having
+         a uniform presentation, however, and avoiding unnecessary code, the stacked skins are being
+         applied in the main application -->
     <s:navigationContent>
         <s:Button label="Home" click="navigator.popToFirstView()"/>
     </s:navigationContent>
-
 </s:ViewNavigatorApplication>
