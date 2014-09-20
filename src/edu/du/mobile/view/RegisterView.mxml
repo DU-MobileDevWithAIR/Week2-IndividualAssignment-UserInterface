@@ -6,16 +6,15 @@
                xmlns:s="library://ns.adobe.com/flex/spark"
                title="Register">
 
+    <!--Needs to become a more integrated process of workflow to allow for modular styling-->
     <fx:Style>
-
         .registerTitle{
-            fontSize: 35;
+            fontSize: 30;
             horizontalCenter: 0;
-            top: 60;
+            top: 40;
         }
 
         .inputTitleText {
-            horizontalCenter: 0;
             fontSize: 16;
         }
 
@@ -24,71 +23,68 @@
             top: 20;
             fontSize: 16;
         }
-
-
      </fx:Style>
 
     <!-- TODO: Create the Register View UI -->
+    <!--IMPORTANT: Needed to allow for page scroll-->
+    <s:Scroller width="100%" height="110%" horizontalCenter="0">
+        <!--Main Wrapper Page-->
+        <s:VGroup gap="30" top="60" width="70%" paddingBottom="40" paddingTop="40" horizontalAlign="center">
 
-    <s:Scroller width="100%" height="110%">
-        <s:Group styleName="mainCont" width="100%">
-            <s:Label
-                    styleName="registerTitle"
-                    text="Register"/>
-
-            <s:VGroup  gap="20" top="125" horizontalCenter="0" height="600">
-
-                <s:SkinnableContainer horizontalCenter="0" width="270">
-                  <s:Label  percentWidth="100" styleName="inputTitleText" text="Username*"/>
+            <!--Register Label-->
+                <s:Label styleName="registerTitle" text="Register"/>
+                <!--Input group-->
+            <s:VGroup gap="20" horizontalAlign="center" width="100%">
+                <s:Group width="80%">
+                  <s:Label  styleName="inputTitleText" text="Username*"/>
                   <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please choose a username"/>
-                </s:SkinnableContainer>
+                </s:Group>
 
-                <s:SkinnableContainer horizontalCenter="0" width="270">
-                    <s:Label  percentWidth="100" styleName="inputTitleText" text="Email*"/>
-                    <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please enter your email"/>
-                </s:SkinnableContainer>
+                <s:Group width="80%">
+                    <s:Label  styleName="inputTitleText" text="Email*"/>
+                    <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please center your email"/>
+                </s:Group>
 
-                <s:SkinnableContainer horizontalCenter="0" width="270">
-                    <s:Label  percentWidth="100" styleName="inputTitleText" text="Password*"/>
-                    <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please choose a password"/>
-                </s:SkinnableContainer>
+                <s:Group width="80%">
+                    <s:Label  styleName="inputTitleText" text="Password*"/>
+                    <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please choose password"/>
+                </s:Group>
 
-                <s:SkinnableContainer horizontalCenter="0" width="270">
-                    <s:Label  percentWidth="100" styleName="inputTitleText" text="Confirm Password*"/>
-                    <s:TextInput  height="40" percentWidth="100" styleName="regInput" enabled="true" text="please confirm your password"/>
-                </s:SkinnableContainer>
-
-                <s:SkinnableContainer textAlign="left">
-                    <s:Label styleName="inputTitleText" text="Gender"/>
-                </s:SkinnableContainer>
-
-                <s:HGroup gap="20">
-                    <s:SkinnableContainer>
+                <s:Group width="80%">
+                    <s:Label  styleName="inputTitleText" text="Confirm Password*"/>
+                    <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please confirm your password"/>
+                </s:Group>
+            </s:VGroup>
+            <!--End of Input Group-->
+            <s:Group width="80%">
+                <s:Label left="0" styleName="inputTitleText" text="Gender"/>
+                <!--Gender radio buttons-->
+                <s:HGroup top="25">
                     <s:RadioButton
                             horizontalCenter="0"
                             label="Male"
                             fontSize="16"
                             />
-                    </s:SkinnableContainer>
-                    <s:SkinnableContainer>
-                        <s:RadioButton
-                                horizontalCenter="0"
-                                label="Female"
-                                fontSize="16"
-                                />
-                    </s:SkinnableContainer>
+                    <s:RadioButton
+                            horizontalCenter="0"
+                            label="Female"
+                            fontSize="16"
+                            />
                 </s:HGroup>
-
-                <s:SkinnableContainer horizontalCenter="0">
-                    <s:CheckBox id="agree" label="Agree to terms*" fontSize="14" horizontalCenter="0"/>
-                </s:SkinnableContainer>
-
-                <s:SkinnableContainer width="270">
-                <s:Button styleName="regButton" width="120" label="Register" horizontalCenter="0" height="40" fontSize="14"/>
-                </s:SkinnableContainer>
-
-         </s:VGroup>
-        </s:Group>
+            </s:Group>
+            <!--End of Gender Radio Buttons-->
+            <!--Terms Agreement Box-->
+            <s:Group width="80%">
+                <s:CheckBox id="agree" label="Agree to terms*" fontSize="14" left="0"/>
+            </s:Group>
+            <!--End Terms Agreement Box-->
+            <!--Register Button-->
+            <s:Group width="80%">
+                <s:Button width="120" label="Register" height="40" horizontalCenter="0" fontSize="14"/>
+            </s:Group>
+            <!--End Register Button-->
+        </s:VGroup>
+        <!--End Main Wrapper-->
     </s:Scroller>
-
+    <!--IMPORTANT: End Scroll functionality-->
 </s:View>
