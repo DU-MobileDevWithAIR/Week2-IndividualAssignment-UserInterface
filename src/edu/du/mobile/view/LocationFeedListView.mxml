@@ -3,8 +3,53 @@
   Created by jun on 9/14/14.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    title="Location Feed">
+    <!--Needs to become a more integrated process of workflow to allow for modular styling-->
+    <fx:Style>
+        .layout {
+            fontSize: 16px;
+        }
+
+        .link {
+            textDecoration: underline;
+            color: blue;
+        }
+
+        .listBox {
+            borderColor: black;
+            borderThickness: 1px;
+        }
+    </fx:Style>
 
     <!-- TODO: Create the LocationFeed List View UI -->
-
+    <!--IMPORTANT: Needed to allow for page scroll-->
+    <s:Scroller width="100%" height="110%">
+        <!--Group wrapper for stacked page layout  -->
+        <s:VGroup width="100%" gap="20" paddingTop="40" paddingBottom="40" horizontalCenter="0">
+            <!--Title label and done button-->
+            <s:Group styleName="layout" horizontalCenter="0" width="100%">
+                <s:SkinnableContainer styleName="layout" horizontalCenter="0" width="90%">
+                    <s:Label horizontalCenter="0" text="Nearby Locations"/>
+                    <s:Label styleName="link" right="15" text="Done" click="navigator.pushView( TemporaryView )"/>
+                </s:SkinnableContainer>
+            </s:Group>
+            <!--End title and done button-->
+            <!--List-->
+            <s:Group horizontalCenter="0" width="100%">
+                <s:List horizontalCenter="0" verticalCenter="0" width="90%" borderVisible="true" styleName="listBox, layout" >
+                    <s:dataProvider>
+                        <s:ArrayCollection>
+                            <fx:String>Item One</fx:String>
+                            <fx:String>Item Two</fx:String>
+                            <fx:String>Item Three</fx:String>
+                        </s:ArrayCollection>
+                    </s:dataProvider>
+                </s:List>
+            </s:Group>
+            <!--End list-->
+        </s:VGroup>
+        <!--End group wrapper for page layout-->
+    </s:Scroller>
+    <!--IMPORTANT: End Scroll functionality-->
 </s:View>
