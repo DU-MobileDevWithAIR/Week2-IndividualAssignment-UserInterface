@@ -7,9 +7,6 @@
                title="Register">
 
     <fx:Style>
-        .layoutTrace {
-            backgroundColor: blue;
-        }
 
         .registerTitle{
             fontSize: 35;
@@ -28,9 +25,6 @@
             fontSize: 16;
         }
 
-        .radioCont {
-            paddingRight: 60;
-        }
 
      </fx:Style>
 
@@ -90,7 +84,7 @@
                 </s:SkinnableContainer>
 
                 <s:SkinnableContainer width="270">
-                <s:Button styleName="regButton" label="Register" horizontalCenter="0" height="40" fontSize="14"/>
+                <s:Button styleName="regButton" width="120" label="Register" horizontalCenter="0" height="40" fontSize="14"/>
                 </s:SkinnableContainer>
 
          </s:VGroup>
