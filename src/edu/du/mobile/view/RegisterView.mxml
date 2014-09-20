@@ -7,7 +7,9 @@
                title="Register">
 
     <fx:Style>
-
+        .layoutTrace {
+            backgroundColor: blue;
+        }
 
         .registerTitle{
             fontSize: 35;
@@ -40,32 +42,33 @@
                     styleName="registerTitle"
                     text="Register"/>
 
-            <s:VGroup  gap="20" top="125" horizontalCenter="0">
+            <s:VGroup  gap="20" top="125" horizontalCenter="0" height="600">
 
-                <s:SkinnableContainer horizontalCenter="0">
-                  <s:Label  width="270" styleName="inputTitleText" text="Username*"/>
-                  <s:TextInput height="40" width="270" styleName="regInput" enabled="true" text="please choose a username"/>
+                <s:SkinnableContainer horizontalCenter="0" width="270">
+                  <s:Label  percentWidth="100" styleName="inputTitleText" text="Username*"/>
+                  <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please choose a username"/>
                 </s:SkinnableContainer>
 
-                <s:SkinnableContainer horizontalCenter="0">
-                    <s:Label  width="270" styleName="inputTitleText" text="Email*"/>
-                    <s:TextInput height="40" width="270" styleName="regInput" enabled="true" text="please enter your email"/>
+                <s:SkinnableContainer horizontalCenter="0" width="270">
+                    <s:Label  percentWidth="100" styleName="inputTitleText" text="Email*"/>
+                    <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please enter your email"/>
                 </s:SkinnableContainer>
 
-                <s:SkinnableContainer horizontalCenter="0">
-                    <s:Label  width="270" styleName="inputTitleText" text="Password*"/>
-                    <s:TextInput height="40" width="270" styleName="regInput" enabled="true" text="please choose a password"/>
+                <s:SkinnableContainer horizontalCenter="0" width="270">
+                    <s:Label  percentWidth="100" styleName="inputTitleText" text="Password*"/>
+                    <s:TextInput height="40" percentWidth="100" styleName="regInput" enabled="true" text="please choose a password"/>
                 </s:SkinnableContainer>
 
-                <s:SkinnableContainer horizontalCenter="0">
-                    <s:Label  width="270" styleName="inputTitleText" text="Confirm Password*"/>
-                    <s:TextInput  height="40" width="270" styleName="regInput" enabled="true" text="please confirm your password"/>
+                <s:SkinnableContainer horizontalCenter="0" width="270">
+                    <s:Label  percentWidth="100" styleName="inputTitleText" text="Confirm Password*"/>
+                    <s:TextInput  height="40" percentWidth="100" styleName="regInput" enabled="true" text="please confirm your password"/>
                 </s:SkinnableContainer>
 
-                <s:SkinnableContainer horizontalCenter="0">
-                    <s:Label  horizontalCenter="0" styleName="inputTitleText" text="Gender"/>
+                <s:SkinnableContainer textAlign="left">
+                    <s:Label styleName="inputTitleText" text="Gender"/>
                 </s:SkinnableContainer>
-                <s:HGroup>
+
+                <s:HGroup gap="20">
                     <s:SkinnableContainer>
                     <s:RadioButton
                             horizontalCenter="0"
@@ -84,7 +87,10 @@
 
                 <s:SkinnableContainer horizontalCenter="0">
                     <s:CheckBox id="agree" label="Agree to terms*" fontSize="14" horizontalCenter="0"/>
-                    <!--<s:Button  styleName="regButton" label="Register" horizontalCenter="0" height="40" width="150" fontSize="14"/>-->
+                </s:SkinnableContainer>
+
+                <s:SkinnableContainer width="270">
+                <s:Button styleName="regButton" label="Register" horizontalCenter="0" height="40" fontSize="14"/>
                 </s:SkinnableContainer>
 
          </s:VGroup>
