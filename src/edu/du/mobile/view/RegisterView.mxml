@@ -20,6 +20,8 @@
 
     </fx:Declarations>
 
+    <s:Scroller width="500" height="700">
+    <s:Group verticalScrollPosition="0">
     <s:VGroup paddingLeft="60" paddingRight="10" paddingBottom="5">
         <s:Form fontSize="18" skinClass="spark.skins.spark.StackedFormSkin" horizontalCenter="0">
             <s:FormHeading textAlign="center" label="Register" fontSize="30" skinClass="spark.skins.spark.StackedFormHeadingSkin"/>
@@ -57,5 +59,7 @@
             </s:FormItem>
         </s:Form>
     </s:VGroup>
+    </s:Group>
+    </s:Scroller>
 
 </s:View>

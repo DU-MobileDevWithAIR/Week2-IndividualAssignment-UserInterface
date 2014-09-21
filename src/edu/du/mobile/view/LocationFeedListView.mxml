@@ -6,7 +6,9 @@
     xmlns:s="library://ns.adobe.com/flex/spark"
     xmlns:mx="library://ns.adobe.com/flex/mx">
 
-    <s:HGroup id="location" horizontalAlign="right"
+    <s:Scroller width="480" height="580">
+        <s:Group>
+        <s:HGroup id="location" horizontalAlign="right"
               top="40" left="20" right="20">
         <s:Label text="Nearby Locations" textAlign="center"/>
         <s:Label text="Done" textDecoration="underline" color="blue"/>
@@ -19,5 +21,7 @@
             <s:Label text="Item Three" top="30"/>
         </s:VGroup>
     </s:BorderContainer>
+    </s:Group>
+    </s:Scroller>
 
 </s:View>
