@@ -10,5 +10,8 @@
     <s:navigationContent>
         <s:Button label="Home" click="navigator.popToFirstView()"/>
     </s:navigationContent>
+    <s:titleContent>
+        <s:Label text="My Title"/>
+    </s:titleContent>
 
 </s:ViewNavigatorApplication>
