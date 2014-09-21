@@ -1,10 +1,66 @@
 <?xml version="1.0"?>
+
 <!--
   Created by jun on 9/14/14.
+  Modified by Kami Nelson on 9/20/14.
 -->
-<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
 
-    <!-- TODO: Create the Register View UI -->
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        fontSize="16">
+
+    <s:VGroup width="100%"
+              height="100%"
+              horizontalAlign="center"
+              id="registrationFormGroup">
+
+        <s:Form id="registrationForm">
+
+            <s:FormHeading label="Register"
+                           fontSize="28"
+                           textAlign="center"/>
+
+            <s:FormItem label="Username*"
+                        required="true">
+                <s:TextInput prompt="please choose a username"/>
+            </s:FormItem>
+
+            <s:FormItem label="Email*"
+                        required="true">
+                <s:TextInput prompt="please enter your email"/>
+            </s:FormItem>
+
+            <s:FormItem label="Password*"
+                        required="true">
+                <s:TextInput prompt="please choose a password"/>
+            </s:FormItem>
+
+            <s:FormItem label="Confirm Password"
+                        required="true">
+                <s:TextInput prompt="please confirm your password"/>
+            </s:FormItem>
+
+            <s:FormItem label="Gender">
+                <s:HGroup>
+                    <s:RadioButton label="Male"/>
+                    <s:RadioButton label="Female"/>
+                </s:HGroup>
+            </s:FormItem>
+
+            <s:FormItem required="true">
+                <s:CheckBox label="Agree to Terms" />
+            </s:FormItem>
+
+            <s:FormItem>
+                <s:HGroup horizontalAlign="center" percentWidth="100">
+                    <s:Button label="Register"/>
+                </s:HGroup>
+            </s:FormItem>
+
+        </s:Form>
+
+    </s:VGroup>
+
+    <s:VScrollBar viewport="{registrationFormGroup}" height="100%"/>
 
 </s:View>

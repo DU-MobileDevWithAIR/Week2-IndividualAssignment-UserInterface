@@ -1,10 +1,46 @@
 <?xml version="1.0"?>
 <!--
   Created by jun on 9/14/14.
+  Modified by Kami Nelson on 9/20/14.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark">
 
-    <!-- TODO: Create the LocationFeed List View UI -->
+
+    <s:VGroup id="listGroup"
+              top="20"
+              left="20"
+              right="20">
+
+        <s:Group width="100%">
+            <s:Label horizontalCenter="0"
+                     text="Nearby Locations"
+                     paddingBottom="10"
+                     fontSize="28"/>
+
+            <s:Label id="doneLabel"
+                     text="Done"
+                     color="blue"
+                     textDecoration="underline"
+                     fontSize="12"
+                     top="0"
+                     right="20"
+                     click="navigator.pushView( TemporaryView )" />
+        </s:Group>
+
+            <s:List id="myList"
+                borderVisible="true"
+                borderColor="gray"
+                width="100%"
+                height="70%"
+                fontSize="16">
+
+                <s:dataProvider>
+                    <s:ArrayList id="arrayList"
+                             source="[Item One, Item Two, Item Three]" />
+                </s:dataProvider>
+            </s:List>
+
+    </s:VGroup>
 
 </s:View>
