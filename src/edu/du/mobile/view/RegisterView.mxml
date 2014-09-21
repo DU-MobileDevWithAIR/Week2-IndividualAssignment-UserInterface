@@ -1,10 +1,61 @@
-<?xml version="1.0"?>
-<!--
-  Created by jun on 9/14/14.
--->
-<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
+<?xml version="1.0" encoding="utf-8"?>
 
-    <!-- TODO: Create the Register View UI -->
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns="library://ns.adobe.com/flex/mx" xmlns:mx="library://ns.adobe.com/flex/spark">
+
+    <fx:Declarations>
+        <fx:Model id="checkModel">
+            <User>
+                <Username>{username.text}</Username>
+                <Email>{email.text}</Email>
+                <Password>{password.text}</Password>
+            </User>
+        </fx:Model>
+
+        <StringValidator source="{username}" property="text" minLength="4" maxLength="12"/>
+        <EmailValidator source="{email}" property="text"/>
+
+
+
+    </fx:Declarations>
+
+    <s:VGroup paddingLeft="60" paddingRight="10" paddingBottom="5">
+        <s:Form fontSize="18" skinClass="spark.skins.spark.StackedFormSkin" horizontalCenter="0">
+            <s:FormHeading textAlign="center" label="Register" fontSize="30" skinClass="spark.skins.spark.StackedFormHeadingSkin"/>
+
+            <s:FormItem label="Username *" skinClass="spark.skins.spark.StackedFormItemSkin">
+                <s:TextInput id="username" width="300" height="35" prompt="please enter a username"/>
+            </s:FormItem>
+
+            <s:FormItem label="Email *"  skinClass="spark.skins.spark.StackedFormItemSkin">
+                <s:TextInput id="email" width="300" height="35" prompt="please enter your email"/>
+            </s:FormItem>
+
+            <s:FormItem label="Password *" skinClass="spark.skins.spark.StackedFormItemSkin">
+                <s:TextInput id="password" width="300" height="35" prompt="please choose a password"
+                             displayAsPassword="true"/>
+            </s:FormItem>
+
+            <s:FormItem label="Confirm Password *" skinClass="spark.skins.spark.StackedFormItemSkin">
+                <s:TextInput id="confirmPassword" width="300" height="35" prompt="please confirm your password"
+                             displayAsPassword="true"/>
+            </s:FormItem>
+
+            <s:FormItem label="Gender" skinClass="spark.skins.spark.StackedFormItemSkin">
+                <s:HGroup>
+                <s:RadioButton id="maleRadioBtn" label="Male" groupName="group1"/>
+                <s:RadioButton id="femaleRadioBtn" label="Female" groupName="group1"/>
+                </s:HGroup>
+            </s:FormItem>
+
+            <s:FormItem label="" skinClass="spark.skins.spark.StackedFormItemSkin">
+                <s:CheckBox label="Agree to Terms *"/>
+            </s:FormItem>
+            <s:FormItem skinClass="spark.skins.spark.StackedFormItemSkin">
+                <s:Button label="Register" height="50"/>
+            </s:FormItem>
+        </s:Form>
+    </s:VGroup>
 
 </s:View>

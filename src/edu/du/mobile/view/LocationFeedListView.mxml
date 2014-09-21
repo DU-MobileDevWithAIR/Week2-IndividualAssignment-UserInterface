@@ -3,8 +3,21 @@
   Created by jun on 9/14/14.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx">
 
-    <!-- TODO: Create the LocationFeed List View UI -->
+    <s:HGroup id="location" horizontalAlign="right"
+              top="40" left="20" right="20">
+        <s:Label text="Nearby Locations" textAlign="center"/>
+        <s:Label text="Done" textDecoration="underline" color="blue"/>
+    </s:HGroup>
+
+    <s:BorderContainer id="brdr" height="500" width="450" horizontalCenter="0" baseline="100">
+        <s:VGroup paddingBottom="10" paddingTop="10" paddingRight="10" paddingLeft="10" fontSize="16">
+            <s:Label text="Item One" top="0"/>
+            <s:Label text="Item Two" top="15"/>
+            <s:Label text="Item Three" top="30"/>
+        </s:VGroup>
+    </s:BorderContainer>
 
 </s:View>
