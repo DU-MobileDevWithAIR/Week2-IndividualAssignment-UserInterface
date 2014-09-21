@@ -6,40 +6,47 @@
     xmlns:s="library://ns.adobe.com/flex/spark">
 
 
-    <s:VGroup id="LoginForm"
-              top="20" left="20" right="20">
-        <s:Label text="login" top="20"/>
+    <s:VGroup id="LoginForm" gap="20"
+           top="20" left="20" right="20" horizontalAlign="center">
+            <s:Label text="login" top="20"/>
+
+        <s:Group>
             <s:Label text="username:"/>
-            <s:TextInput id="username_ti"
+            <s:TextInput id="username_ti" top="30"
                   prompt="enter your username"/>
+        </s:Group>
 
-        <s:Label text="email:"/>
-        <s:TextInput id="email_ti"
-                     prompt="enter your email"/>
+        <s:Group>
+            <s:Label text="email:"/>
+            <s:TextInput id="email_ti" top="30"
+                 prompt="enter your email"/>
+        </s:Group>
 
-        <s:Label text="password:"/>
-        <s:TextInput id="password1_ti"
-                     prompt="enter your password"/>
+        <s:Group>
+            <s:Label text="password:"/>
+            <s:TextInput id="password1_ti" top="30"
+                  prompt="enter your password"/>
+        </s:Group>
 
-        <s:Label text="Confirm password"/>
-        <s:TextInput id="password2_ti"
-                     prompt="enter your password"/>
+        <s:Group>
+            <s:Label text="Confirm password"/>
+            <s:TextInput id="password2_ti" top="30"
+                  prompt="enter your password"/>
+        </s:Group>
 
-        <s:Label text="Gender"/>
-            <s:RadioButton id="isMale"
+        <s:HGroup>
+            <s:Label text="Gender"/>
+                <s:RadioButton id="isMale"
                            label="Male"
                            groupName="gender"
                            selected="true"/>
-            <s:RadioButton id="isFemale"
+                <s:RadioButton id="isFemale"
                            label="Female"
                            groupName="gender"/>
+        </s:HGroup>
 
-            <s:CheckBox id="checkBox"
-                        label="Agree to Terms"/>
+            <s:CheckBox id="checkBox" label="Agree to Terms"/>
             <s:Button id="RegisterButton" label="Register" click=""/>
     </s:VGroup>
-
-
     <!-- TODO: Create the Register View UI -->
-
 </s:View>
