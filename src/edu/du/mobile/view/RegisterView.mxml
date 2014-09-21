@@ -4,7 +4,40 @@
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark">
+    <s:Scroller width="100%" height="100%">
+        <s:VGroup id="registerForm"
+                  paddingTop="20" paddingLeft="20" paddingRight="20" paddingBottom="20">
 
-    <!-- TODO: Create the Register View UI -->
+            <s:VGroup width="100%" horizontalAlign="center">
+                <s:Label text="Register" fontSize="40"/>
+            </s:VGroup>
+
+            <s:Label text="Username *" paddingTop="30"/>
+            <s:TextInput enabled="true" text="Please Choose a Username" width="100%"/>
+
+            <s:Label text="Email *" paddingTop="30"/>
+            <s:TextInput enabled="true" text="Please Enter Your Email" width="100%"/>
+
+            <s:Label text="Password *" paddingTop="30"/>
+            <s:TextInput enabled="true" text="Please Choose a Password" width="100%"/>
+
+            <s:Label text="Confirm Password *" paddingTop="30"/>
+            <s:TextInput enabled="true" text="Please Confirm Your Password" width="100%"/>
+
+            <s:Label text="Gender" paddingTop="30"/>
+
+            <s:HGroup paddingBottom="30">
+                <s:RadioButton label="Male" groupName="gender"/>
+                <s:RadioButton label="Female" groupName="gender"/>
+            </s:HGroup>
+
+            <s:CheckBox label="Agree to Terms*"/>
+
+            <s:VGroup width="100%" horizontalAlign="center" paddingTop="30">
+                <s:Button label="Register"/>
+            </s:VGroup>
+
+        </s:VGroup>
+    </s:Scroller>
 
 </s:View>
