@@ -8,7 +8,7 @@
 
     <s:VGroup id="LoginForm" gap="20"
            top="20" left="20" right="20" horizontalAlign="center">
-            <s:Label text="login" top="20"/>
+            <s:Label text="Register" top="20"/>
 
         <s:Group>
             <s:Label text="username:"/>
