@@ -18,3 +18,9 @@ build.properties
 out
 .idea
 *.iml
+
+src/edu/du/mobile/view/components/myButton.mxml
+
+src/edu/du/mobile/view/RegisterView.mxml
+
+src/HelloWorldMain.mxml
