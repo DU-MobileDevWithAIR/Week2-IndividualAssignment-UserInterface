@@ -13,16 +13,16 @@
     </fx:Style>
 
     <!-- TODO: Create the LocationFeed List View UI -->
-    <s:Scroller width="100%" height="100%">
+
             <s:VGroup width="100%" gap="20" paddingTop="40" paddingBottom="40" horizontalCenter="0">
                 <!--Title and link-->
                         <s:Group width="100%" horizontalCenter="0" >
                             <s:Label text="Nearby Locations" horizontalCenter="0" />
                             <s:Label styleName="done"  right="20" text="Done" click="navigator.pushView( TemporaryView )"/>
-                        </s:Group>
+                      </s:Group>
                 <!--end of title and link-->
                 <!--List-->
-                        <s:Group horizontalCenter="0" width="100%">
+                       <s:Group horizontalCenter="0" width="100%">
                             <s:List horizontalCenter="0" width="90%" height="400" top="80" borderVisible="true" verticalCenter="0">
                                 <s:dataProvider>
                                     <s:ArrayCollection>
@@ -42,5 +42,5 @@
                         </s:Group>
               <!--end of list-->
          </s:VGroup>
-    </s:Scroller>
+
 </s:View>
