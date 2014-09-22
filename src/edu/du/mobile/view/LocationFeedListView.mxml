@@ -6,6 +6,11 @@
     xmlns:s="library://ns.adobe.com/flex/spark"
     xmlns:mx="library://ns.adobe.com/flex/mx">
 
+    <s:layout>
+        <s:VerticalLayout horizontalAlign="center"
+                          paddingTop="10" gap="10"/>
+    </s:layout>
+
     <s:Scroller width="480" height="580">
         <s:Group>
         <s:HGroup id="location" horizontalAlign="right"
@@ -15,11 +20,11 @@
     </s:HGroup>
 
     <s:BorderContainer id="brdr" height="500" width="450" horizontalCenter="0" baseline="100">
-        <s:VGroup paddingBottom="10" paddingTop="10" paddingRight="10" paddingLeft="10" fontSize="16">
-            <s:Label text="Item One" top="0"/>
-            <s:Label text="Item Two" top="15"/>
-            <s:Label text="Item Three" top="30"/>
-        </s:VGroup>
+
+            <s:Label text="Item One" top="0" paddingLeft="10" paddingTop="10" paddingBottom="10"/>
+            <s:Label text="Item Two" top="30" paddingLeft="10" paddingTop="10" paddingBottom="10"/>
+            <s:Label text="Item Three" top="60" paddingLeft="10" paddingTop="10" paddingBottom="10"/>
+
     </s:BorderContainer>
     </s:Group>
     </s:Scroller>
