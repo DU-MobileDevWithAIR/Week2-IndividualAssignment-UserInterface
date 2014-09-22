@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+  Created by theresatrejo on 9/18/14.
+-->
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns:components="edu.du.mobile.view.components.*">
+    <!--<s:Label text="Gender"/>
+    <s:RadioButton label="Female"/>-->
+
+    <s:layout>
+        <s:BasicLayout/>
+    </s:layout>
+
+    <components:TsButton label="Hey Dude"/>
+
+    <s:RadioButton label="Select Me" x="100" y="100"/>
+
+</s:View>

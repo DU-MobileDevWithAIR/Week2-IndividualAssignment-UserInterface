@@ -17,8 +17,12 @@
         label="Preview Register View"
         click="navigator.pushView( RegisterView )"/>
 
-    <s:Button id="previewLocationFeedList_btn"
+    <s:Button id="previewTsButton_btn"
         label="Preview Location Feed List View"
         click="navigator.pushView( LocationFeedListView )"/>
+
+    <s:Button id="previewLocationFeedList_btn"
+              label="Preview T's View"
+               click="navigator.pushView( TsView )"/>
 
 </s:View>
