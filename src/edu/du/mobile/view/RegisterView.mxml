@@ -15,9 +15,6 @@
 
         <StringValidator source="{username}" property="text" minLength="4" maxLength="12"/>
         <EmailValidator source="{email}" property="text"/>
-
-
-
     </fx:Declarations>
 
     <s:Scroller width="500" height="700">
@@ -61,5 +58,4 @@
     </s:VGroup>
     </s:Group>
     </s:Scroller>
-
 </s:View>
