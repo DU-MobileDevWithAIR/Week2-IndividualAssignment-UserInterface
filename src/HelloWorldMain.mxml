@@ -11,7 +11,7 @@
         <s:Button label="Home" click="navigator.popToFirstView()"/>
     </s:navigationContent>
     <s:titleContent>
-        <s:Label text="My title"/>
+        <s:Label text="CODE ASSIGNMENT 2"/>
     </s:titleContent>
 
 
