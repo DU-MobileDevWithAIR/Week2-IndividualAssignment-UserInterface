@@ -6,27 +6,41 @@
     xmlns:s="library://ns.adobe.com/flex/spark"
     xmlns:mx="library://ns.adobe.com/flex/mx">
 
+    <fx:Script>
+        <![CDATA[
+            private function _onListChange( event:Event):void
+            {
+
+            }
+        ]]>
+    </fx:Script>
+
     <s:layout>
         <s:VerticalLayout horizontalAlign="center"
-                          paddingTop="10" gap="10"/>
+                          paddingTop="20" paddingLeft="20" paddingRight="20"/>
     </s:layout>
 
-    <s:Scroller width="480" height="580">
-        <s:Group>
-        <s:HGroup id="location" horizontalAlign="right"
-              top="40" left="20" right="20">
-        <s:Label text="Nearby Locations" textAlign="center"/>
-        <s:Label text="Done" textDecoration="underline" color="blue"/>
-    </s:HGroup>
+        <s:HGroup>
+        <s:Label text="Nearby Locations"
+                 paddingLeft="125"/>
+        <s:Label text="Done"
+                 fontSize="18"
+                 color="blue"
+                 paddingLeft="70"/>
+        </s:HGroup>
 
-    <s:BorderContainer id="brdr" height="500" width="450" horizontalCenter="0" baseline="100">
+            <s:List id="locationList"
+                    top="100"
+                    width="100%"
+                    height="100%"
+                    borderVisible="true">
 
-            <s:Label text="Item One" top="0" paddingLeft="10" paddingTop="10" paddingBottom="10"/>
-            <s:Label text="Item Two" top="30" paddingLeft="10" paddingTop="10" paddingBottom="10"/>
-            <s:Label text="Item Three" top="60" paddingLeft="10" paddingTop="10" paddingBottom="10"/>
+                <s:ArrayList>
+                        <fx:String>Item One</fx:String>
+                        <fx:String>Item Two</fx:String>
+                        <fx:String>Item Three</fx:String>
+                </s:ArrayList>
 
-    </s:BorderContainer>
-    </s:Group>
-    </s:Scroller>
+            </s:List>
 
 </s:View>
