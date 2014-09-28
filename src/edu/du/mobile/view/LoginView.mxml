@@ -5,23 +5,34 @@
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
     xmlns:s="library://ns.adobe.com/flex/spark">
 
-    <s:VGroup id="loginForm"
-        top="20" left="20" right="20">
+    <fx:Script>
+        <![CDATA[
 
-        <s:Label text="login form"/>
+        ]]>
+    </fx:Script>
 
-        <s:Label text="username:"/>
+    <s:layout>
+        <s:VerticalLayout paddingTop="20" paddingLeft="20" paddingRight="20"
+                          clipAndEnableScrolling="true"/>
+    </s:layout>
+
+        <s:Label text="Please Login"
+                fontSize="42"
+                paddingLeft="100"
+                paddingBottom="20"/>
+
+        <s:Label text="Username"/>
         <s:TextInput id="username_ti"
-            prompt="enter your username"/>
+                prompt="enter your username"/>
 
-        <s:Label text="password:"/>
+        <s:Label text="password:"
+                paddingTop="20"/>
         <s:TextInput id="password_ti"
-            prompt="enter your password"
-            displayAsPassword="true"/>
+                prompt="enter your password"
+                displayAsPassword="true"/>
 
         <s:Button id="submit_btn"
-            label="login"/>
-
-    </s:VGroup>
+                label="login"
+                left="150"/>
 
 </s:View>

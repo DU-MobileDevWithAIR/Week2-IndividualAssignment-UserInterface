@@ -1,10 +1,63 @@
-<?xml version="1.0"?>
-<!--
-  Created by jun on 9/14/14.
--->
-<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
-    xmlns:s="library://ns.adobe.com/flex/spark">
+<?xml version="1.0" encoding="utf-8"?>
 
-    <!-- TODO: Create the Register View UI -->
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns="library://ns.adobe.com/flex/mx" xmlns:mx="library://ns.adobe.com/flex/spark">
+
+    <s:layout>
+        <s:VerticalLayout paddingTop="20" paddingLeft="20" paddingRight="20"
+                          clipAndEnableScrolling="true"/>
+    </s:layout>
+
+    <s:Scroller width="100%" height="100%"
+            top="20" left="20" right="20">
+
+        <s:VGroup id="registrationForm">
+
+            <s:Label text="Register"
+                     fontSize="40"
+                     paddingLeft="140"/>
+
+            <s:Label text="Username *"/>
+            <s:TextInput id="registerUsername_ti"
+                         prompt="please enter a username"/>
+
+            <s:Label text="Email *"/>
+            <s:TextInput id="registerEmail_ti"
+                         prompt="please enter your email"/>
+
+            <s:Label text="Password *"/>
+            <s:TextInput id="registerPassword_ti"
+                         prompt="please choose a password"
+                         displayAsPassword="true"/>
+
+            <s:Label text="Confirm Password *"/>
+                    <s:TextInput id="confirmPassword_ti"
+                          prompt="please confirm your password"
+                          displayAsPassword="true"/>
+
+            <s:Label text="Gender"/>
+            <s:HGroup id="GenderGroup">
+
+                    <s:RadioButton id="maleRadioBtn"
+                                   label="Male"
+                                   groupName="GenderGroup1"/>
+
+                    <s:RadioButton id="femaleRadioBtn"
+                                   label="Female"
+                                   groupName="genderGroup1"/>
+            </s:HGroup>
+
+            <s:HGroup id="terms">
+                <s:CheckBox id="terms_chk"/>
+                <s:Label text="agree to terms *"/>
+            </s:HGroup>
+
+            <s:Button id="submit_btn"
+                      label="register"/>
+
+        </s:VGroup>
+
+    </s:Scroller>
 
 </s:View>
